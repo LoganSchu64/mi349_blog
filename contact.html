@@ -12,21 +12,32 @@
         <a href="contact.html">Contact</a>
     </nav>
     <h1>Contact Me</h1>
-    <form name="contact" netlify>
-            <label for="name">Name</label>
+    <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <p>
+            <label for="name">Name</label><br>
             <input type="text" id="name" name="name" required>
-            <label for="email">Email address</label>
+        </p>
+        <p>
+            <label for="email">Email address</label><br>
             <input type="email" id="email" name="email" required>
-            <label for="reason">Reason for contact</label>
+        </p>
+        <p>
+            <label for="reason">Reason for contact</label><br>
             <select id="reason" name="reason" required>
                 <option value="">--Please choose an option--</option>
                 <option value="hi">Saying hi</option>
                 <option value="contractor">Looking for a contractor</option>
                 <option value="interview">Interested in an interview</option>
             </select>
-            <label for="comment">Comment</label>
+        </p>
+        <p>
+            <label for="comment">Comment</label><br>
             <textarea id="comment" name="comment" required></textarea>
+        </p>
+        <p>
             <button type="submit">Submit</button>
-        </form>
+        </p>
+    </form>
 </body>
 </html>
