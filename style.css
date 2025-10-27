@@ -159,3 +159,32 @@ form[data-netlify] button:hover {
     margin-bottom: 24px;
 }
 
+/* Ensure images scale and are accessible */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive rules - tablet / small desktop */
+@media (max-width: 900px) {
+    .container { flex-direction: column; gap: 0; padding: 16px; }
+    .sidebar { position: static; flex: none; width: 100%; top: auto; margin-bottom: 20px; }
+    nav { text-align: left; padding: 12px 0; }
+    nav a { display: inline-block; margin-right: 12px; }
+    .blog-post img.floated { float: none; max-width: 100%; margin: 0 0 12px 0; }
+    form[data-netlify] { flex-direction: column; }
+    .main-content { padding: 8px 0; }
+}
+
+/* Responsive rules - phones */
+@media (max-width: 600px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    p { font-size: 1rem; line-height: 1.6; }
+    nav a { font-size: 1rem; }
+    table { font-size: 0.95rem; display: block; overflow-x: auto; }
+    .caption { font-size: 0.9em; }
+}
+
